@@ -27,6 +27,6 @@
     "icon": "fa-csharp"
   },
   "backend": {
-    "imageid": "docker"
+    "imageid": "kubernetes"
   }
 }
