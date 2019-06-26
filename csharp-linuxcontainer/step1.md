@@ -6,5 +6,7 @@ This is your first step.
 
 # Create Dockerfile
 
-
+```
+FROM hoge
+```
 
