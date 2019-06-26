@@ -6,11 +6,11 @@
   "details": {
     "steps": [{
       "title": "Step 1 - Run Command",
-      "code": "step1.sh",
       "text": "step1.md"
     }],
     "intro": {
       "text": "intro.md",
+      "code": "foreground.sh",
       "credits": ""
     },
     "finish": {
@@ -22,7 +22,6 @@
   ],
   "environment": {
     "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\n[m\r\n",
-    "hideintro": true,
     "hidefinish": true,
     "uilayout": "editor-terminal",
     "icon": "fa-csharp"

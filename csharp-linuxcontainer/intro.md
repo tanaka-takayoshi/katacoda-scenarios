@@ -1,1 +1,1 @@
-Welcome to your first Katacoda Scenario!
+Let's start .NET Core containerized app.
