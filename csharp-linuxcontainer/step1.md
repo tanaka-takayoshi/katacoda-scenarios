@@ -8,8 +8,8 @@ This is your first step.
 
 # Create Dockerfile
 
-`touch Dockerfile`
+`touch Dockerfile`{{execute}}
 
-`Dockerfile`{{execute}}
+`Dockerfile`{{open}}
 
 

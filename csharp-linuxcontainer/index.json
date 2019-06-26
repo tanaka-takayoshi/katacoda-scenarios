@@ -16,11 +16,15 @@
       "text": "finish.md"
     }
   },
+  "files": [
+    "app.js", "index.js"
+  ],
   "environment": {
     "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\n[m\r\n",
     "hideintro": true,
     "hidefinish": true,
-    "uilayout": "editor-terminal"
+    "uilayout": "editor-terminal",
+    "icon": "fa-csharp"
   },
   "backend": {
     "imageid": "c#"
