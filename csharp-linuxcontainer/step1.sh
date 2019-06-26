@@ -1,0 +1,1 @@
+cd /home/scrapbook/tutorial/
