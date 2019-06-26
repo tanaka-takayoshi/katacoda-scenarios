@@ -2,7 +2,9 @@ This is your first step.
 
 # Create a ASP.NET Core project
 
-`dotnet new web`{{execute}}
+`dotnet new web -o MyWebApp`{{execute}}
+
+`cd MyWebApp`{{execute}}
 
 # Create Dockerfile
 
