@@ -1,0 +1,28 @@
+{
+  "title": "C# Linux Container",
+  "description": "How to write Dockerfile for .NET Core (C#) project",
+  "difficulty": "beginner",
+  "time": "１ hour",
+  "details": {
+    "steps": [{
+      "title": "Step 1 - Run Command",
+      "text": "step1.md"
+    }],
+    "intro": {
+      "text": "intro.md",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\n[m\r\n",
+    "hideintro": true,
+    "hidefinish": true,
+    "uilayout": "editor-terminal"
+  },
+  "backend": {
+    "imageid": "c#"
+  }
+}
