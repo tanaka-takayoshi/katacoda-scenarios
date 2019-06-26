@@ -18,15 +18,16 @@
     }
   },
   "files": [
-    "Dockerfile"
+    "MyWebApp/Dockerfile"
   ],
   "environment": {
     "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\n[m\r\n",
     "hidefinish": true,
     "uilayout": "editor-terminal",
-    "icon": "fa-csharp"
+    "icon": "csharp"
   },
   "backend": {
-    "imageid": "kubernetes"
+    "imageid": "kubernetes",
+    "port": 5000
   }
 }
