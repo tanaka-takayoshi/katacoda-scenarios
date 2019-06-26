@@ -1,11 +1,11 @@
 {
   "title": "C# Linux Container",
-  "description": "How to write Dockerfile for .NET Core (C#) project",
+  "description": "C#によるASP.NETアプリのコンテナ",
   "difficulty": "beginner",
   "time": "１ hour",
   "details": {
     "steps": [{
-      "title": "Step 1 - Run Command",
+      "title": "Step 1 - ASP.NETプロジェクトの作成",
       "text": "step1.md"
     }],
     "intro": {
