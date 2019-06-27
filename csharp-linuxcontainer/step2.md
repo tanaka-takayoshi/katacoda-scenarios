@@ -23,3 +23,7 @@ ENTRYPOINT [ "dotnet", "MyWebApp.dll" ]
 # Dockerイメージのビルド
 
 `docker build -t mywebapp  .`{{execute}}
+
+# Dockerイメージの実行
+
+`docker run mywebapp -t 80:80`{{execute}}
