@@ -16,10 +16,6 @@
     {
       "title": "Step 3 - Dockerコマンド",
       "text": "step3.md"
-    },
-    {
-      "title": "Step 4 - (optional)DockerイメージのPush",
-      "text": "step4.md"
     }
   ],
     "intro": {

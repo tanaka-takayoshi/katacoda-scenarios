@@ -1,5 +1,8 @@
+Dockerfileを使ってDockerイメージを作成し、実行します。
 
 # Dockerfileの編集
+
+以下のファイルを開き、下の内容をペーストします。
 
 `MyWebApp/Dockerfile`{{open}}
 
@@ -22,9 +25,13 @@ ENTRYPOINT [ "dotnet", "MyWebApp.dll" ]
 
 # Dockerイメージのビルド
 
+次のコマンドでDockerイメージをビルドします。`-t`は作成するイメージにつけるタグです。
+
 `docker build -t mywebapp  .`{{execute}}
 
 # Dockerイメージの実行
+
+次のコマンドで作成したイメージを実行します。
 
 `docker run mywebapp`{{execute}}
 
@@ -37,3 +44,5 @@ ENTRYPOINT [ "dotnet", "MyWebApp.dll" ]
 もしコンテナホストですでにポート80を使っている場合は別のポートに変更できます。例えばポート8123をコンテナのポート80にマッピングさせる場合は次のコマンドを実行します。
 
 `docker run -p 8123:80 mywebapp`
+
+コンテナは起動したまま次のステップに進んでください。

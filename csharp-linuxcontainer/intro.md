@@ -1,1 +1,1 @@
-Let's start .NET Core containerized app.
+.NET CoreをLinuxコンテナイメージ動かしてみましょう。
