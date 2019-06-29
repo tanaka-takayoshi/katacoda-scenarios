@@ -3,7 +3,7 @@
 
 `MyWebApp/Dockerfile`{{open}}
 
-```
+<pre class="file" data-target="clipboard">
 FROM mcr.microsoft.com/dotnet/core/aspnet:2.2 AS base
 
 WORKDIR /app
@@ -18,7 +18,7 @@ FROM base As final
 WORKDIR /app
 COPY --from=publish /app /app
 ENTRYPOINT [ "dotnet", "MyWebApp.dll" ]
-```
+</pre>
 
 # Dockerイメージのビルド
 
@@ -26,4 +26,14 @@ ENTRYPOINT [ "dotnet", "MyWebApp.dll" ]
 
 # Dockerイメージの実行
 
-`docker run mywebapp -t 80:80`{{execute}}
+`docker run mywebapp`{{execute}}
+
+なお上のコマンドではコンテナ外部からアプリにアクセスできません。これはKatacodeのイメージの仕様によるものです。
+そのほかの環境を利用している場合、`-p`オプションをつけることでコンテナホストのポートとコンテナないのポートをマッピングできます。
+これにより、コンテナホストのポート80にアクセスするとコンテナのポート80にアクセスできます。
+
+`docker run -p 80:80 mywebapp`
+
+もしコンテナホストですでにポート80を使っている場合は別のポートに変更できます。例えばポート8123をコンテナのポート80にマッピングさせる場合は次のコマンドを実行します。
+
+`docker run -p 8123:80 mywebapp`

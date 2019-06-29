@@ -9,20 +9,23 @@ This is your first step.
 
 `cd MyWebApp`{{execute}}
 
-発行したバイナリでアプリを実行します。
+アプリケーションの発行をします。
 
 `dotnet publish`{{execute}}
 
-デフォルトでは外部から接続できないので、環境変数を設定し、外部からの接続を許可しポートも変更します。
+このままのデフォルト設定では外部から接続できないので、環境変数を設定し、外部からの接続を許可しポートも変更します。
 
-`ASPNETCORE_URLS=http://+:80`{{execute}}
+`export ASPNETCORE_URLS=http://+:80`{{execute}}
+
+実行します。
+
 `dotnet bin/Debug/netcoreapp2.2/publish/MyWebApp.dll`{{execute}}
 
-新しいターミナルを開いて実行。
+新しいターミナルを開いて実行するとアクセスできます。
 
 `curl localhost:80`{{execute}}
 
-Katacodeで動いているこのホストはインターネットに直接公開されてはいないのでそのままではアクセスできません。
+外部からアクセスしたい場合、Katacodeで動いているこのホストはインターネットに直接公開されてはいないのでそのままではアクセスできません。
 その代わりに以下のURLでプロキシを介して接続できます。
 
 https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com
