@@ -1,0 +1,1 @@
+.NET Coreコンテナをkuberbnetes上で動かしてみましょう。

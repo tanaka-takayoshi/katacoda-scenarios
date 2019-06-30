@@ -1,0 +1,43 @@
+{
+  "title": "C# Linux Container",
+  "description": "C#によるASP.NETアプリのコンテナ",
+  "difficulty": "beginner",
+  "time": "１ hour",
+  "details": {
+    "steps": [
+    {
+      "title": "Step 1 - ASP.NETプロジェクトの作成",
+      "text": "step1.md"
+    },
+    {
+      "title": "Step 2 - Dockerイメージの作成",
+      "text": "step2.md"
+    },
+    {
+      "title": "Step 3 - Dockerコマンド",
+      "text": "step3.md"
+    }
+  ],
+    "intro": {
+      "text": "intro.md",
+      "code": "foreground.sh",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "files": [
+    "MyWebApp/Dockerfile"
+  ],
+  "environment": {
+    "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\n[m\r\n",
+    "hidefinish": true,
+    "uilayout": "editor-terminal",
+    "icon": "csharp"
+  },
+  "backend": {
+    "imageid": "kubernetes",
+    "port": 80
+  }
+}
