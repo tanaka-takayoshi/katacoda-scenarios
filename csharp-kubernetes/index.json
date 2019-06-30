@@ -1,6 +1,6 @@
 {
-  "title": "C# Linux Container",
-  "description": "C#によるASP.NETアプリのコンテナ",
+  "title": "C# .NET Core kubernetes",
+  "description": ".NET Coreコンテナをkubernetesで動かす",
   "difficulty": "beginner",
   "time": "１ hour",
   "details": {
@@ -16,6 +16,11 @@
     {
       "title": "Step 3 - Dockerコマンド",
       "text": "step3.md"
+    },
+    {
+      "title": "Step 4 - kubernetes基本",
+      "text": "step4.md",
+      "code": "step4.sh"
     }
   ],
     "intro": {

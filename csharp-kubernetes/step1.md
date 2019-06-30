@@ -1,4 +1,3 @@
-This is your first step.
 
 # プロジェクトの作成
 
