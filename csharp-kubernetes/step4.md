@@ -63,3 +63,15 @@ kubernetes   ClusterIP   10.96.0.1      <none>        443/TCP    28m
 mywebapp     ClusterIP   10.99.45.161   <none>        8080/TCP   4s
 ```
 
+$ kubectl get svc
+NAME         TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)           AGE
+kubernetes   ClusterIP   10.96.0.1       <none>        443/TCP           40m
+mywebapp     NodePort    10.105.95.136   <none>        18080:32564/TCP   2s
+master $ curl 10.105.95.136:32564
+^C
+master $ curl 10.105.95.136:18080
+Hello World!master $ curl localhost:18080
+curl: (7) Failed to connect to localhost port 18080: Connection refused
+master $ curl localhost:32564
+
+https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com

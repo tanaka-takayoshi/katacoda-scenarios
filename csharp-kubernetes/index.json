@@ -37,7 +37,6 @@
   ],
   "environment": {
     "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\n[m\r\n",
-    "hidefinish": true,
     "uilayout": "editor-terminal",
     "icon": "csharp"
   },
