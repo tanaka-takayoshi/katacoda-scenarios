@@ -67,3 +67,7 @@ mywebapp     NodePort    10.105.95.136   <none>        18080:32564/TCP   2s
 `curl 10.105.95.136:18080`
 
 これだけだとkubernetesのクラスター外部からはアクセスできません。今のKatacodeでは動きませんが、ServiceのTypeをLoadBalancerにすることなどで外部からアクセスできるようになります。
+
+一度作成したServiceを削除して次に進んでください。
+
+`kubectl delete svc mywebapp`{{execute}}

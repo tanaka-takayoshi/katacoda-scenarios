@@ -7,7 +7,7 @@ JSON形式でも定義できますが、タイプ量が少なくなるYAML形式
 
 そこでYAMLファイルを作成します。
 
-`touch MyWebApp/mywebapp.yaml`{{execute}}
+`touch mywebapp.yaml`{{execute}}
 
 作成したファイルをエディターで開き、その下のYAMLの記述をコピーペーストしてください。
 
@@ -55,7 +55,7 @@ spec:
 
 ファイルの内容からオブジェクトを作成する次のコマンドを実行してください。
 
-`kubectl create -f myqebapp.yaml`{{execute}}
+`kubectl create -f mywebapp.yaml`{{execute}}
 
 実際に作成されたオブジェクトを確認するには次のコマンドを実行します。
 
@@ -67,32 +67,41 @@ spec:
 
 さきほどと同じようにCLUSTER-IPとPORTの組み合わせでアクセスすることができます。
 
-`curl `
+`curl 10.105.95.136:18080`
 
 # kubernetesのオブジェクトを編集する
 
 作成したオブジェクトに変更を加えることもできます。全てのパラメーターを作成後に変更できるわけではありませんが、例えば1つのDeploymentで作成するPodの数を増やすことができます。
 すなわち、手動でアプリケーションをスケーリングすることができます。
 
-次のコマンドを実行すると、ターミナルでエディタが開きオブジェクトを編集できます。
+次のコマンドを実行すると、ターミナルでエディタが開きオブジェクトを編集できます。通常は`KUBE_EDITOR`環境変数にお気に入りのエディタを登録するのがよいでしょう。katacode環境ではvimではうまく表示されないことがあったため、nanoを使っています。
 
-`kubectl edit deployment mywebapp`{{execute}}
+`KUBE_EDITOR=nano kubectl edit deployment mywebapp-deployment`{{execute}}
 
-次のように`replicas`を3に変更します。
+次のようになっている箇所を見つけ、`replicas`を3に変更します。
 
 ```
-spec:
-  selector:
-    matchLabels:
-      app: mywebapp
-  replicas: 3
+  spec:
+    selector:
+      matchLabels:
+        app: mywebapp
+    replicas: 3
 ```
 
 
-`:wq`をタイプしてEnterすると保存されます。もし、妥当でないファイル形式だったり、妥当でない変更があった場合、エラーとなりもう一度編集画面に戻ります。
+`CTRL+X`をタイプして`Y`とタイプすると保存されます。もし、妥当でないファイル形式だったり、妥当でない変更があった場合、エラーとなりもう一度編集画面に戻ります。
 変更可能な場合は、エディタが終了されるのでPodが増える様子を確認して見ましょう。
 
 `kubectl get pod -w`{{execute}}
+
+```
+ kubectl get pod -w
+NAME                                 READY   STATUS    RESTARTS   AGE
+mywebapp                             1/1     Running   0          6m49s
+mywebapp-deployment-b9cbf596-62mss   1/1     Running   0          5m16s
+mywebapp-deployment-b9cbf596-cz86b   1/1     Running   0          8s
+mywebapp-deployment-b9cbf596-t2rqc   1/1     Running   0          8s
+```
 
 先ほどアクセスしたURLで同じようにアクセスされます。
 この時、見た目ではわかりませんが3つのPodにリクエストは振り分けられています。Serviceは起動しているPodにのみリクエストを振り分けるので、適当なPodを削除すると、そのPodへはリクエストは割り振られず、新しいPodが作成されるとそのPodに割り振られるようになります。
