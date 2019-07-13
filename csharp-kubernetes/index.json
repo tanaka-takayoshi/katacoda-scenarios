@@ -24,8 +24,7 @@
     },
     {
       "title": "Step 5 - kubernetes操作",
-      "text": "step5.md",
-      "code": "step5.sh"
+      "text": "step5.md"
     }
   ],
     "intro": {
