@@ -21,6 +21,11 @@
       "title": "Step 4 - kubernetes基本",
       "text": "step4.md",
       "code": "step4.sh"
+    },
+    {
+      "title": "Step 5 - kubernetes操作",
+      "text": "step5.md",
+      "code": "step5.sh"
     }
   ],
     "intro": {

@@ -65,7 +65,9 @@ spec:
 
 `kubectl get pod,svc`{{execute}}
 
-//アクセスする
+さきほどと同じようにCLUSTER-IPとPORTの組み合わせでアクセスすることができます。
+
+`curl `
 
 # kubernetesのオブジェクトを編集する
 
